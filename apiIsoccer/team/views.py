@@ -19,12 +19,12 @@ class EmployeesDetail(generics.RetrieveUpdateDestroyAPIView) :
 
 class RecourseList(generics.ListCreateAPIView) :
     queryset = recourse.objects.all()
-    serializer_class = fansSerializer
+    serializer_class = recourseSerializer
     authentication_classes = (SessionAuthentication, BasicAuthentication, JSONWebTokenAuthentication)
     permission_classes = (permissions.IsAuthenticated,)
 class RecourseDetail(generics.RetrieveUpdateDestroyAPIView) :
     queryset = recourse.objects.all()
-    serializer_class = fansSerializer
+    serializer_class = recourseSerializer
     authentication_classes = (SessionAuthentication, BasicAuthentication, JSONWebTokenAuthentication)
     permission_classes = (permissions.IsAuthenticated,)
 
